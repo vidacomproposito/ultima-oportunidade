@@ -1,149 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Última Oportunidade</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body, html { width: 100%; height: 100%; font-family: 'Montserrat', sans-serif; }
-.backredirect-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    padding: 20px;
-    color: #fff;
-    overflow: hidden;
-    animation: fadeIn 1s ease-in-out;
-    background: url('https://res.cloudinary.com/dk3slm2as/image/upload/v1757552957/ChatGPT_Image_10_de_set._de_2025_20_40_25_mzwxtl.png') no-repeat center center/cover;
-    position: relative;
-}
-.backredirect-container::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.65); /* overlay mais forte para legibilidade */
-    z-index: 0;
-}
-.content {
-    position: relative;
-    z-index: 1;
-    max-width: 500px;
-    background-color: rgba(0,0,0,0.25); /* leve bloco semitransparente */
-    padding: 20px 25px;
-    border-radius: 12px;
-}
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-}
-h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-}
-p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    line-height: 1.5;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
-.price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #ffeb3b;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-}
-.old-price {
-    text-decoration: line-through;
-    font-weight: 400;
-    margin-right: 10px;
-    color: #ff9999;
-}
-ul {
-    list-style: none;
-    margin-bottom: 30px;
-    padding-left: 0;
-}
-ul li {
-    margin: 10px 0;
-    font-size: 1rem;
-    font-weight: 600;
-    position: relative;
-    padding-left: 25px;
-}
-ul li::before {
-    content: '✔';
-    position: absolute;
-    left: 0;
-    color: #fff;
-    font-weight: bold;
-}
-.cta-button {
-    background-color: #ff3b3f;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
-    animation: pulse 1.5s infinite;
-    text-decoration: none;
-    display: inline-block;
-}
-.cta-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    background-color: #e6373a;
-}
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-@media (max-width: 480px) {
-    h1 { font-size: 1.5rem; }
-    p, ul li { font-size: 0.9rem; }
-    .price { font-size: 1.2rem; }
-    .cta-button { font-size: 1rem; padding: 12px 25px; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Última Oportunidade</title>
+    <meta name="description" content="Os 21 dias vão passar de qualquer jeito... aproveite agora e dê o primeiro passo para transformação!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="backredirect-container" id="backredirect">
-    <div class="content">
-        <h1>Esta é a sua última oportunidade: Deus quer falar com você agora!</h1>
-        <p>Você começou essa jornada, respondeu às perguntas e está diante de um momento único. Muitos passam a vida inteira buscando respostas, mas <strong>você está recebendo oportunidade de transformação hoje</strong>.</p>
-        <p class="price">
-            <span class="old-price">De: R$97,90</span>Por: R$17,90
-        </p>
-        <p style="margin-bottom:25px;">Oferta especial válida apenas neste momento!</p>
-        <ul>
-            <li>Ative sua fé e destrave sua vida em 21 dias</li>
-            <li>Aprenda passos guiados que realmente funcionam</li>
-            <li>Sinta a presença de Deus e veja mudanças reais</li>
-        </ul>
-        <a href="#" id="ctaButton" class="cta-button" aria-label="Ativar minha fé por R$17,90">Sim, quero começar agora por R$17,90!</a>
-        <p style="margin-top:15px; font-size:0.9rem;">NÃO RECUSE A BENÇÃO. Os 21 dias vão passar de qualquer jeito… aproveite agora e dê o primeiro passo para transformação!</p>
+    <div class="backredirect-container">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Esta é a sua última oportunidade: Deus quer falar com você agora!</h1>
+            <p>Você começou essa jornada, respondeu às perguntas e está diante de um momento único. Muitos passam a vida inteira buscando respostas, mas <strong>você está recebendo oportunidade de transformação hoje</strong>.</p>
+            
+            <p class="price">
+                <span class="old-price">De: R$97,90</span> Por: R$17,90
+            </p>
+            <p class="urgencia">⚠ Oferta especial válida apenas neste momento!</p>
+
+            <ul>
+                <li>Ative sua fé e destrave sua vida em 21 dias</li>
+                <li>Aprenda passos guiados que realmente funcionam</li>
+                <li>Sinta a presença de Deus e veja mudanças reais</li>
+            </ul>
+
+            <a href="#" id="ctaButton" class="cta-button">Sim, quero começar agora por R$17,90!</a>
+
+            <p class="final-msg">⏳ NÃO RECUSE A BENÇÃO. Os 21 dias vão passar de qualquer jeito… aproveite agora e dê o primeiro passo para transformação!</p>
+        </div>
     </div>
-</div>
-<script>
-const ctaButton = document.getElementById('ctaButton');
-ctaButton.addEventListener('click', function(e) {
-    e.preventDefault();
-    ctaButton.textContent = "Carregando..."; // feedback imediato
-    window.location.href = "https://pay.kirvano.com/68a2974c-173c-40a9-b2db-520f6595b299";
-});
-</script>
+
+    <script>
+        const ctaButton = document.getElementById('ctaButton');
+        ctaButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            ctaButton.textContent = "Carregando...";
+            window.location.href = "https://pay.kirvano.com/68a2974c-173c-40a9-b2db-520f6595b299";
+        });
+    </script>
 </body>
 </html>
