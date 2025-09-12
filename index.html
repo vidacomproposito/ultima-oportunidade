@@ -10,26 +10,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <div class="backredirect-container">
         <div class="overlay"></div>
         <div class="content">
-            <h1>Esta é a sua última oportunidade: Deus quer falar com você agora!</h1>
-            <p>Você começou essa jornada, respondeu às perguntas e está diante de um momento único. Muitos passam a vida inteira buscando respostas, mas <strong>você está recebendo oportunidade de transformação hoje</strong>.</p>
+            <div class="timer">
+                ⏳ Oferta válida por: <span id="countdown">03:00</span>
+            </div>
+            <h1>NÃO SAIA AGORA</h1>
+            <h2>Deus Tá Te Chamando, e Você Vai Ignorar?</h2>
+            <br>
+            <p>Você já começou a responder, sentiu aquela dor no peito ao admitir seus bloqueios... e agora vai virar as costas? Isso pode ser o erro que te mantém preso nos mesmos desafios, longe da presença de Deus. Muitos ignoram esse momento e passam anos sofrendo – não seja um deles. <strong>Essa é sua ÚNICA chance de destravar sua fé e ver respostas reais antes que seja tarde.</strong>.</p>
             
             <p class="price">
                 <span class="old-price">De: R$97,90</span> Por: R$17,90
             </p>
-            <p class="urgencia">⚠ Oferta especial válida apenas neste momento!</p>
+            <p class="urgencia">⚠ Não perca isso: Complete o quiz agora e ative sua transformação espiritual. Deus não manda sinais à toa – ignore e fique no escuro pra sempre.</p>
 
             <ul>
                 <li>Ative sua fé e destrave sua vida em 21 dias</li>
-                <li>Aprenda passos guiados que realmente funcionam</li>
-                <li>Sinta a presença de Deus e veja mudanças reais</li>
+                <li>Pare de se sentir abandonado por Deus</li>
+                <li>Sinta o primeiro passo pra mudanças reais</li>
             </ul>
 
-            <a href="#" id="ctaButton" class="cta-button">Sim, quero começar agora por R$17,90!</a>
+            <a href="#" id="ctaButton" class="cta-button">SIM, QUERO DESTRAVAR MINHA VIDA AGORA POR R$17,90!</a>
 
-            <p class="final-msg">⏳ NÃO RECUSE A BENÇÃO. Os 21 dias vão passar de qualquer jeito… aproveite agora e dê o primeiro passo para transformação!</p>
+            <p class="final-msg">⏳ Os minutos estão correndo – se você sair, essa oferta some e você volta pro ciclo de frustração. Você não recebeu essa oportunidade atoa... não a desperdice, ou lide com as consequências.</p>
         </div>
     </div>
 
@@ -39,6 +45,24 @@
             e.preventDefault();
             window.location.href = "https://pay.kirvano.com/68a2974c-173c-40a9-b2db-520f6595b299";
         });
+
+        let timeLeft = 180;
+        const countdownEl = document.getElementById("countdown");
+
+         const timer = setInterval(() => {
+            let minutes = Math.floor(timeLeft / 60);
+            let seconds = timeLeft % 60;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            countdownEl.textContent = `${minutes}:${seconds}`;
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                countdownEl.textContent = "00:00";
+                document.querySelector(".timer").textContent = "⏳ Tempo esgotado! Decida AGORA!";
+            }
+            timeLeft--;
+        }, 1000);
     </script>
 </body>
 </html>
