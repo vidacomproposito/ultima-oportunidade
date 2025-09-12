@@ -8,6 +8,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
     color: #fff;
+    overflow: hidden;
 }
 
 .backredirect-container {
@@ -39,6 +40,8 @@ h1 {
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 15px;
+    background-color: red;
+    padding: 5px;
 }
 
 p {
@@ -97,7 +100,7 @@ ul li::before {
     font-size: 1.1rem;
     font-weight: 700;
     color: #fff;
-    background: linear-gradient(135deg, #f7971e, #ffd200); 
+    background: linear-gradient(135deg, #f7971e, #a78800); 
     border-radius: 50px;
     text-decoration: none;
     box-shadow: 0px 6px 20px rgba(255, 215, 0, 0.5);
@@ -107,7 +110,7 @@ ul li::before {
 
 .cta-button:hover {
     transform: scale(1.05);
-    box-shadow: 0px 8px 25px rgba(255, 215, 0, 0.7);
+    box-shadow: 0px 8px 25px rgba(255, 236, 129, 0.7);
 }
 
 .final-msg {
@@ -115,6 +118,19 @@ ul li::before {
     font-size: 0.9rem;
     font-style: italic;
     color: #f0f0f0;
+}
+
+.timer {
+    background: linear-gradient(90deg, #ff9800, #ff5722); 
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 @keyframes pulse {
@@ -129,4 +145,3 @@ ul li::before {
     .price { font-size: 1.2rem; }
     .cta-button { font-size: 1rem; padding: 12px 25px; }
 }
-
