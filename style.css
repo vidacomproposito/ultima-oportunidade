@@ -19,6 +19,7 @@ body {
     background: #000 url('background.png') no-repeat center center/cover;
     position: relative;
     padding-top: 20px; 
+     overflow-y: auto;
 }
 
 .overlay {
